@@ -41,13 +41,8 @@ galleryList.addEventListener("click", (event) => {
 });
 
 const onEscPress = (event, instance) => {
-  const ESC_KEYCODE = "Escape";
-  if (event.code === ESC_KEYCODE) {
+  if (event.code === "Escape") {
     instance.close();
-    instances.splice(instances.indexOf(instance), 1);
-    document.removeEventListener("keydown", (event) =>
-      onEscPress(event, instance)
-    );
   }
 };
 
